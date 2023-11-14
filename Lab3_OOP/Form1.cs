@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.Windows.Forms;
 
 namespace Lab3_OOP
@@ -11,47 +12,29 @@ namespace Lab3_OOP
             graphics = Graphics.FromImage(bitmap);
             graphics.Clear(Color.White);
             pic.Image = bitmap;
+            drawer = new Drawer();
             toolBar = new DrawingToolbar(toolStrip);
-            toolBar.AddButton("Button1", "Tag1");
-            toolBar.ButtonClicked += (sender, tag) =>
-            {
-                MessageBox.Show("Button was clicked with tag" + tag);
-            };
         }
 
         Bitmap bitmap;
         Graphics graphics;
-        bool paint = false;
-        int index;
-
-        private Shape currectShape;
+        Drawer drawer;
         DrawingToolbar toolBar;
+        bool paint = false;
+        private IShape currectShape;
+        IShape[] shapes = { new PointShape(), new LineShape(), new RectangleShape(), new EllipseShape(), new CubeShape(new RectangleShape(), new RectangleShape(), new LineShape(), new LineShape(), new LineShape(), new LineShape()), new LineOOShape(new LineShape(), new EllipseShape(), new EllipseShape()) };
+
+        private void selectShape(IShape shape)
+        {
+            currectShape = shape;
+        }
 
         private void pic_MouseDown(object sender, MouseEventArgs e)
         {
-            paint = true;
-
-            switch (index)
+            if (currectShape != null)
             {
-                case 1:
-                    currectShape = new PointShape();
-                    currectShape.FillColor = Color.Black;
-                    break;
-                case 2:
-                    currectShape = new LineShape();
-                    currectShape.getStart(e.X, e.Y);
-                    currectShape.FillColor = Color.Black;
-                    break;
-                case 3:
-                    currectShape = new RectangleShape();
-                    currectShape.getStart(e.X, e.Y);
-                    currectShape.FillColor = Color.Black;
-                    break;
-                case 4:
-                    currectShape = new EllipseShape();
-                    currectShape.getStart(e.X, e.Y);
-                    currectShape.FillColor = Color.Green;
-                    break;
+                paint = true;
+                drawer.drawerGetStart(currectShape, e.X, e.Y);
             }
         }
 
@@ -60,79 +43,77 @@ namespace Lab3_OOP
             pic.Refresh();
             if (paint)
             {
-                currectShape.refresh(e.X, e.Y);
+                drawer.drawerRefresh(currectShape, e.X, e.Y);
             }
         }
 
         private void pic_MouseUp(object sender, MouseEventArgs e)
         {
-            paint = false;
-            if (index != 0 && index <= 4)
+            if (paint)
             {
-                currectShape.CircuitColor = Color.Black;
-                currectShape.Draw(graphics, e);
+                paint = false;
+                drawer.Draw(currectShape, graphics, e);
             }
         }
 
         private void pic_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            if (index == 2 && paint == true)
-            {
-                currectShape.CircuitColor = Color.Blue;
-                currectShape.DrawCircuit(g);
-            }
-            if (index == 3 && paint == true)
-            {
-                currectShape.CircuitColor = Color.Blue;
-                currectShape.DrawCircuit(g);
-            }
 
-            if (index == 4 && paint == true)
+            if (paint)
             {
-                currectShape.CircuitColor = Color.Blue;
-                currectShape.DrawCircuit(g);
+                drawer.DrawCircuit(currectShape, g);
             }
         }
 
         private void êðàïêàToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            index = 1;
+            selectShape(shapes[0]);
         }
 
         private void ë³í³ÿToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            index = 2;
+            selectShape(shapes[1]);
         }
 
         private void ïðÿìîêóòíèêToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            index = 3;
+            selectShape(shapes[2]);
         }
 
         private void åë³ïñToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            index = 4;
+            selectShape(shapes[3]);
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            index = 1;
+            selectShape(shapes[0]);
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            index = 2;
+            selectShape(shapes[1]);
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            index = 3;
+            selectShape(shapes[2]);
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            index = 4;
+            selectShape(shapes[3]);
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            selectShape(shapes[4]);
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            selectShape(shapes[5]);
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

@@ -4,6 +4,7 @@ C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\bin\Deb
 C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\bin\Debug\net6.0-windows\Lab3_OOP.dll
 C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\bin\Debug\net6.0-windows\Lab3_OOP.pdb
 C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\obj\Debug\net6.0-windows\Lab3_OOP.Form1.resources
+C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\obj\Debug\net6.0-windows\Lab3_OOP.Properties.Resources.resources
 C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\obj\Debug\net6.0-windows\Lab3_OOP.csproj.GenerateResource.cache
 C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\obj\Debug\net6.0-windows\Lab3_OOP.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\obj\Debug\net6.0-windows\Lab3_OOP.AssemblyInfoInputs.cache
@@ -14,4 +15,3 @@ C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\obj\Deb
 C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\obj\Debug\net6.0-windows\Lab3_OOP.pdb
 C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\obj\Debug\net6.0-windows\Lab3_OOP.genruntimeconfig.cache
 C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\obj\Debug\net6.0-windows\ref\Lab3_OOP.dll
-C:\Users\Admin\Desktop\University\2 Семестр\OOP\Lab3_OOP\Lab3_OOP\obj\Debug\net6.0-windows\Lab3_OOP.Properties.Resources.resources

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lab3_OOP
 {
-    internal abstract class Shape
+    internal abstract class Shape : IShape
     {
-        public Color FillColor { get; set; }
-        public Color CircuitColor { get; set; }
+        public Color FillColor = Color.Black;
+        public Color CircuitColor = Color.Blue;
         protected int cX, cY, sX, sY, x, y;
 
         public void refresh(int startX, int StartY)

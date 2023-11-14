@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\University\\2 Семестр\\OOP\\Lab3_OOP\\Lab3_OOP\\Lab3_OOP.csproj",
-      "projectName": "Lab3_OOP",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\University\\2 Семестр\\OOP\\Lab3_OOP\\Lab3_OOP\\Lab3_OOP.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\University\\2 Семестр\\OOP\\Lab3_OOP\\Lab3_OOP\\Lab4_OOP.csproj",
+      "projectName": "Lab4_OOP",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\University\\2 Семестр\\OOP\\Lab3_OOP\\Lab3_OOP\\Lab4_OOP.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Admin\\Desktop\\University\\2 Семестр\\OOP\\Lab3_OOP\\Lab3_OOP\\obj\\",
       "projectStyle": "PackageReference",

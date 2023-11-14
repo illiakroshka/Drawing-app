@@ -47,6 +47,8 @@
             toolStripButton3 = new ToolStripButton();
             toolStripButton4 = new ToolStripButton();
             toolStripButton5 = new ToolStripButton();
+            toolStripButton6 = new ToolStripButton();
+            toolStripButton7 = new ToolStripButton();
             contextMenuStrip1.SuspendLayout();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
@@ -138,7 +140,7 @@
             // toolStrip
             // 
             toolStrip.ImageScalingSize = new Size(20, 20);
-            toolStrip.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripButton4, toolStripButton5 });
+            toolStrip.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripButton4, toolStripButton5, toolStripButton6, toolStripButton7 });
             toolStrip.Location = new Point(0, 28);
             toolStrip.Name = "toolStrip";
             toolStrip.Size = new Size(782, 27);
@@ -195,6 +197,26 @@
             toolStripButton5.Text = "Еліпс";
             toolStripButton5.Click += toolStripButton5_Click;
             // 
+            // toolStripButton6
+            // 
+            toolStripButton6.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton6.Image = (Image)resources.GetObject("toolStripButton6.Image");
+            toolStripButton6.ImageTransparentColor = Color.Magenta;
+            toolStripButton6.Name = "toolStripButton6";
+            toolStripButton6.Size = new Size(29, 24);
+            toolStripButton6.Text = "Cube";
+            toolStripButton6.Click += toolStripButton6_Click;
+            // 
+            // toolStripButton7
+            // 
+            toolStripButton7.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton7.Image = (Image)resources.GetObject("toolStripButton7.Image");
+            toolStripButton7.ImageTransparentColor = Color.Magenta;
+            toolStripButton7.Name = "toolStripButton7";
+            toolStripButton7.Size = new Size(29, 24);
+            toolStripButton7.Text = "Лінія з кружечками";
+            toolStripButton7.Click += toolStripButton7_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -235,5 +257,7 @@
         private ToolStripButton toolStripButton3;
         private ToolStripButton toolStripButton4;
         private ToolStripButton toolStripButton5;
+        private ToolStripButton toolStripButton6;
+        private ToolStripButton toolStripButton7;
     }
 }
