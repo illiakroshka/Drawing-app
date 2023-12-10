@@ -1,3 +1,4 @@
+using Lab4_OOP;
 using System.ComponentModel.DataAnnotations;
 using System.Windows.Forms;
 
@@ -14,8 +15,10 @@ namespace Lab3_OOP
             pic.Image = bitmap;
             drawer = new Drawer();
             toolBar = new DrawingToolbar(toolStrip);
+            f2 = new Form2();
         }
 
+        Form2 f2;
         Bitmap bitmap;
         Graphics graphics;
         Drawer drawer;
@@ -53,6 +56,7 @@ namespace Lab3_OOP
             {
                 paint = false;
                 drawer.Draw(currectShape, graphics, e);
+                f2.setCordinates(currectShape);
             }
         }
 
@@ -119,6 +123,11 @@ namespace Lab3_OOP
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             toolBar.clear(graphics, pic);
+        }
+
+        private void TableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            f2.Show();
         }
     }
 }

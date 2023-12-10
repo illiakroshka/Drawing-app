@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab4_OOP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,10 @@ namespace Lab3_OOP
         public override void DrawCircuit(Graphics graphics)
         {
 
+        }
+        public override IData getData()
+        {
+            return new Data("Point", cX, cY, cX, cY);
         }
     }
 }

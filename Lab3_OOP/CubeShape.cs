@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab4_OOP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace Lab3_OOP
         private readonly ILineShape _shape4;
         private readonly ILineShape _shape5;
         private readonly ILineShape _shape6;
-        private int starttX, starttY;
+        private int starttX, starttY, endX, endY;
 
         private void setStart(int startX, int startY)
         {
@@ -23,6 +24,11 @@ namespace Lab3_OOP
             this.starttY = startY;
         }
 
+        private void setEnd(int endX, int endY)
+        {
+            this.endX = endX;
+            this.endY = endY;
+        }
 
         public CubeShape(IShape shape1, IShape shape2, ILineShape shape3, ILineShape shape4, ILineShape shape5, ILineShape shape6)
         {
@@ -53,6 +59,7 @@ namespace Lab3_OOP
             _shape5.drawByCordinates(graphics, starttX + 50, e.Y + 50);
             _shape6.getStart(e.X, starttY);
             _shape6.drawByCordinates(graphics, e.X + 50, starttY + 50);
+            setEnd(e.X, e.Y);
         }
         public void DrawCircuit(Graphics graphics)
         {
@@ -74,6 +81,11 @@ namespace Lab3_OOP
             _shape5.refresh(starttX + 50, StartY + 50);
             _shape6.getStart(StartX, starttY);
             _shape6.refresh(StartX + 50, starttY + 50);
+        }
+
+        public IData getData()
+        {
+            return new Data("CubeShape", starttX, starttY, endX, endY);
         }
     }
 }

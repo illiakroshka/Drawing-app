@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab4_OOP;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -54,6 +55,10 @@ namespace Lab3_OOP
             _shape2.drawByCordinates(graphics, startX, startY);
             _shape1.DrawCircuit(graphics);
             _shape3.drawByCordinates(graphics, endX, endY);
+        }
+        public IData getData()
+        {
+            return new Data("LineOOShape", startX,startY, endX, endY);
         }
     }
 }

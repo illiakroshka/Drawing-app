@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab4_OOP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,5 +30,7 @@ namespace Lab3_OOP
         public abstract void DrawCircuit(Graphics graphics);
 
         public abstract void Draw(Graphics graphics, MouseEventArgs e);
+
+        public abstract IData getData();
     }
 }

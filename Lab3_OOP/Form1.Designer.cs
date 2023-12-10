@@ -39,7 +39,7 @@
             лініяToolStripMenuItem = new ToolStripMenuItem();
             прямокутникToolStripMenuItem = new ToolStripMenuItem();
             еліпсToolStripMenuItem = new ToolStripMenuItem();
-            довідкаToolStripMenuItem = new ToolStripMenuItem();
+            TableToolStripMenuItem = new ToolStripMenuItem();
             pic = new PictureBox();
             toolStrip = new ToolStrip();
             toolStripButton1 = new ToolStripButton();
@@ -71,7 +71,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem1, обєктиToolStripMenuItem, довідкаToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem1, обєктиToolStripMenuItem, TableToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(782, 28);
@@ -119,11 +119,12 @@
             еліпсToolStripMenuItem.Text = "Еліпс";
             еліпсToolStripMenuItem.Click += еліпсToolStripMenuItem_Click;
             // 
-            // довідкаToolStripMenuItem
+            // TableToolStripMenuItem
             // 
-            довідкаToolStripMenuItem.Name = "довідкаToolStripMenuItem";
-            довідкаToolStripMenuItem.Size = new Size(77, 24);
-            довідкаToolStripMenuItem.Text = "Довідка";
+            TableToolStripMenuItem.Name = "TableToolStripMenuItem";
+            TableToolStripMenuItem.Size = new Size(58, 24);
+            TableToolStripMenuItem.Text = "Table";
+            TableToolStripMenuItem.Click += TableToolStripMenuItem_Click;
             // 
             // pic
             // 
@@ -249,7 +250,7 @@
         private ToolStripMenuItem лініяToolStripMenuItem;
         private ToolStripMenuItem прямокутникToolStripMenuItem;
         private ToolStripMenuItem еліпсToolStripMenuItem;
-        private ToolStripMenuItem довідкаToolStripMenuItem;
+        private ToolStripMenuItem TableToolStripMenuItem;
         private PictureBox pic;
         private ToolStrip toolStrip;
         private ToolStripButton toolStripButton1;

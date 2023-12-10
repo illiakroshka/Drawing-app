@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab4_OOP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,11 @@ namespace Lab3_OOP
             sY = y - cY;
             Pen pen = new Pen(CircuitColor, 2);
             graphics.DrawRectangle(pen, cX, cY, sX, sY);
+        }
+
+        public override IData getData()
+        {
+            return new Data("Rectangle", cX, cY, x, y);
         }
     }
 }

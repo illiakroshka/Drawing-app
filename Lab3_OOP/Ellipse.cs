@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab4_OOP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,6 +46,11 @@ namespace Lab3_OOP
             int iy = y - 20;
             Pen pen = new Pen(CircuitColor, 2);
             graphics.DrawEllipse(pen, ix, iy, 40, 40);
+        }
+
+        public override IData getData()
+        {
+            return new Data("Ellipse", cX, cY, x, y);
         }
     }
 }
