@@ -25,5 +25,9 @@ namespace Lab4_OOP
             IData data = shape.getData();
             dataGridView.Rows.Add(data.Name, data.x1, data.y1, data.x2, data.y2);
         }
+        public void Clear(DataGridView dataGridView)
+        {
+            dataGridView.Rows.Clear();
+        }
     }
 }

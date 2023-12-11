@@ -19,17 +19,12 @@ namespace Lab4_OOP
         public Form2()
         {
             InitializeComponent();
-            table = new Table();
+            table = Table.GetInstance();
             Instance = this;
             dataGridView = this.dataGridView1;
         }
 
         Table table;
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
 
         public void setCordinates(IShape shape)
         {
@@ -38,7 +33,7 @@ namespace Lab4_OOP
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true; // Cancel the close event
+            e.Cancel = true;
             this.Hide();
         }
     }

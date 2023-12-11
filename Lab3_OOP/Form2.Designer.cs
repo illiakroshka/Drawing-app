@@ -91,7 +91,6 @@
             Controls.Add(dataGridView1);
             Text = "Form2";
             FormClosing += Form2_FormClosing;
-            Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

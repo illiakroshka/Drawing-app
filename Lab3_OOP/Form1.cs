@@ -16,6 +16,7 @@ namespace Lab3_OOP
             drawer = new Drawer();
             toolBar = new DrawingToolbar(toolStrip);
             f2 = new Form2();
+            table = Table.GetInstance();
         }
 
         Form2 f2;
@@ -23,6 +24,7 @@ namespace Lab3_OOP
         Graphics graphics;
         Drawer drawer;
         DrawingToolbar toolBar;
+        Table table;
         bool paint = false;
         private IShape currectShape;
         IShape[] shapes = { new PointShape(), new LineShape(), new RectangleShape(), new EllipseShape(), new CubeShape(new RectangleShape(), new RectangleShape(), new LineShape(), new LineShape(), new LineShape(), new LineShape()), new LineOOShape(new LineShape(), new EllipseShape(), new EllipseShape()) };
@@ -124,6 +126,7 @@ namespace Lab3_OOP
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             toolBar.clear(graphics, pic);
+            table.Clear(f2.dataGridView);
         }
 
         private void TableToolStripMenuItem_Click(object sender, EventArgs e)
