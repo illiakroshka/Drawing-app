@@ -14,13 +14,16 @@ namespace Lab4_OOP
     public partial class Form2 : Form
     {
         public static Form2 Instance;
-        
+        public DataGridView dataGridView;
+
         public Form2()
         {
             InitializeComponent();
             table = new Table();
             Instance = this;
+            dataGridView = this.dataGridView1;
         }
+
         Table table;
 
         private void Form2_Load(object sender, EventArgs e)
@@ -30,7 +33,13 @@ namespace Lab4_OOP
 
         public void setCordinates(IShape shape)
         {
-            table.Add(shape, dataGridView1);
+            table.Add(shape, dataGridView);
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true; // Cancel the close event
+            this.Hide();
         }
     }
 }

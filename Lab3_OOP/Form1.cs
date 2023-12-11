@@ -57,6 +57,7 @@ namespace Lab3_OOP
                 paint = false;
                 drawer.Draw(currectShape, graphics, e);
                 f2.setCordinates(currectShape);
+                
             }
         }
 
