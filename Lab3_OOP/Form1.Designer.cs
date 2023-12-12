@@ -34,6 +34,7 @@
             файлToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
             файлToolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
             обєктиToolStripMenuItem = new ToolStripMenuItem();
             крапкаToolStripMenuItem = new ToolStripMenuItem();
             лініяToolStripMenuItem = new ToolStripMenuItem();
@@ -80,42 +81,50 @@
             // 
             // файлToolStripMenuItem1
             // 
+            файлToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1 });
             файлToolStripMenuItem1.Name = "файлToolStripMenuItem1";
-            файлToolStripMenuItem1.Size = new Size(59, 24);
-            файлToolStripMenuItem1.Text = "Файл";
+            файлToolStripMenuItem1.Size = new Size(46, 24);
+            файлToolStripMenuItem1.Text = "File";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(123, 26);
+            toolStripMenuItem1.Text = "Save";
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
             // обєктиToolStripMenuItem
             // 
             обєктиToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { крапкаToolStripMenuItem, лініяToolStripMenuItem, прямокутникToolStripMenuItem, еліпсToolStripMenuItem });
             обєктиToolStripMenuItem.Name = "обєктиToolStripMenuItem";
-            обєктиToolStripMenuItem.Size = new Size(75, 24);
-            обєктиToolStripMenuItem.Text = "Об'єкти";
+            обєктиToolStripMenuItem.Size = new Size(73, 24);
+            обєктиToolStripMenuItem.Text = "Objects";
             // 
             // крапкаToolStripMenuItem
             // 
             крапкаToolStripMenuItem.Name = "крапкаToolStripMenuItem";
-            крапкаToolStripMenuItem.Size = new Size(185, 26);
+            крапкаToolStripMenuItem.Size = new Size(224, 26);
             крапкаToolStripMenuItem.Text = "Крапка";
             крапкаToolStripMenuItem.Click += крапкаToolStripMenuItem_Click;
             // 
             // лініяToolStripMenuItem
             // 
             лініяToolStripMenuItem.Name = "лініяToolStripMenuItem";
-            лініяToolStripMenuItem.Size = new Size(185, 26);
+            лініяToolStripMenuItem.Size = new Size(224, 26);
             лініяToolStripMenuItem.Text = "Лінія ";
             лініяToolStripMenuItem.Click += лініяToolStripMenuItem_Click;
             // 
             // прямокутникToolStripMenuItem
             // 
             прямокутникToolStripMenuItem.Name = "прямокутникToolStripMenuItem";
-            прямокутникToolStripMenuItem.Size = new Size(185, 26);
+            прямокутникToolStripMenuItem.Size = new Size(224, 26);
             прямокутникToolStripMenuItem.Text = "Прямокутник";
             прямокутникToolStripMenuItem.Click += прямокутникToolStripMenuItem_Click;
             // 
             // еліпсToolStripMenuItem
             // 
             еліпсToolStripMenuItem.Name = "еліпсToolStripMenuItem";
-            еліпсToolStripMenuItem.Size = new Size(185, 26);
+            еліпсToolStripMenuItem.Size = new Size(224, 26);
             еліпсToolStripMenuItem.Text = "Еліпс";
             еліпсToolStripMenuItem.Click += еліпсToolStripMenuItem_Click;
             // 
@@ -260,5 +269,6 @@
         private ToolStripButton toolStripButton5;
         private ToolStripButton toolStripButton6;
         private ToolStripButton toolStripButton7;
+        private ToolStripMenuItem toolStripMenuItem1;
     }
 }

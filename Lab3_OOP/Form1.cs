@@ -1,6 +1,7 @@
 using Lab4_OOP;
 using System.ComponentModel.DataAnnotations;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Lab3_OOP
 {
@@ -17,6 +18,7 @@ namespace Lab3_OOP
             toolBar = new DrawingToolbar(toolStrip);
             f2 = new Form2();
             table = Table.GetInstance();
+            fileManager = new FileManager();
         }
 
         Form2 f2;
@@ -25,6 +27,7 @@ namespace Lab3_OOP
         Drawer drawer;
         DrawingToolbar toolBar;
         Table table;
+        FileManager fileManager;
         bool paint = false;
         private IShape currectShape;
         IShape[] shapes = { new PointShape(), new LineShape(), new RectangleShape(), new EllipseShape(), new CubeShape(new RectangleShape(), new RectangleShape(), new LineShape(), new LineShape(), new LineShape(), new LineShape()), new LineOOShape(new LineShape(), new EllipseShape(), new EllipseShape()) };
@@ -59,7 +62,7 @@ namespace Lab3_OOP
                 paint = false;
                 drawer.Draw(currectShape, graphics, e);
                 f2.setCordinates(currectShape);
-                
+
             }
         }
 
@@ -132,6 +135,25 @@ namespace Lab3_OOP
         private void TableToolStripMenuItem_Click(object sender, EventArgs e)
         {
             f2.Show();
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+            if (openFileDialog.FileName != "")
+            {
+                fileManager.SaveDataToTxtFile(openFileDialog.FileName, f2.dataGridView);
+            }
+            else
+            {
+                MessageBox.Show("You didn't select the file");
+            }
         }
     }
 }

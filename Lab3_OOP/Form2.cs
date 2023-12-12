@@ -13,17 +13,14 @@ namespace Lab4_OOP
 {
     public partial class Form2 : Form
     {
-        public static Form2 Instance;
         public DataGridView dataGridView;
 
         public Form2()
         {
             InitializeComponent();
             table = Table.GetInstance();
-            Instance = this;
             dataGridView = this.dataGridView1;
         }
-
         Table table;
 
         public void setCordinates(IShape shape)
